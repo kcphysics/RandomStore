@@ -1,0 +1,1469 @@
+[
+  {
+    "name": "Abacus",
+    "base_price": 2.0,
+    "weight": 2.0,
+    "description": "",
+    "tags": [
+      "craft",
+      "wood"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Acid (vial)",
+    "base_price": 25.0,
+    "weight": 1.0,
+    "description": "As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon. On a hit, the target takes 2d6 acid damage.",
+    "tags": [
+      "alchemist",
+      "glass"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Alchemist's fire (flask)",
+    "base_price": 50.0,
+    "weight": 1.0,
+    "description": "This sticky, adhesive fluid ignites when exposed to air. As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist\u2019s fire as an improvised weapon. On a hit, the target takes 1d4 fire damage at the start of each of its turns. A creature can end this damage by using its action to make a DC 10 Dexterity check to extinguish the flames.",
+    "tags": [
+      "alchemist",
+      "iron"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Arrows (20)",
+    "base_price": 1.0,
+    "weight": 1.0,
+    "description": "",
+    "tags": [
+      "wood",
+      "fletcher"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Blowgun needles (50)",
+    "base_price": 1.0,
+    "weight": 1.0,
+    "description": "",
+    "tags": [
+      "iron",
+      "fletcher"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Crossbow bolts (20)",
+    "base_price": 1.0,
+    "weight": 1.5,
+    "description": "",
+    "tags": [
+      "wood",
+      "fletcher"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Sling bullets (20)",
+    "base_price": 0.04,
+    "weight": 1.5,
+    "description": "",
+    "tags": [
+      "stone"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Amulet",
+    "base_price": 5.0,
+    "weight": 1.0,
+    "description": "",
+    "tags": [
+      "jewler",
+      "gem",
+      "precious_metal"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Antitoxin (vial)",
+    "base_price": 50.0,
+    "weight": 0,
+    "description": "A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs.",
+    "tags": [
+      "apothecary",
+      "glass"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Crystal",
+    "base_price": 10.0,
+    "weight": 1.0,
+    "description": "Arcane Focus",
+    "tags": [
+      "gem",
+      "magic_shop"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Orb",
+    "base_price": 20.0,
+    "weight": 3.0,
+    "description": "Arcane Focus",
+    "tags": [
+      "magic_shop"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Rod",
+    "base_price": 10.0,
+    "weight": 2.0,
+    "description": "Arcane Focus",
+    "tags": [
+      "magic_shop"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Staff",
+    "base_price": 5.0,
+    "weight": 4.0,
+    "description": "Arcane Focus",
+    "tags": [
+      "magic_shop"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Wand",
+    "base_price": 10.0,
+    "weight": 1.0,
+    "description": "Arcane Focus",
+    "tags": [
+      "magic_shop"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Backpack",
+    "base_price": 2.0,
+    "weight": 5.0,
+    "description": "",
+    "tags": [
+      "leather",
+      "leather_works"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Ball bearings (bag of 1,000)",
+    "base_price": 1.0,
+    "weight": 2.0,
+    "description": "As an action, you can spill these tiny metal balls from their pouch to cover a level, square area that is 10 feet on a side. A creature moving across the covered area must succeed on a DC 10 Dexterity saving throw or fall prone. A creature moving through the area at half speed doesn\u2019t need to make the save.",
+    "tags": [
+      "blacksmith",
+      "iron"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Barrel",
+    "base_price": 2.0,
+    "weight": 7.0,
+    "description": "",
+    "tags": [
+      "cooper",
+      "wood"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Basket",
+    "base_price": 0.4,
+    "weight": 2.0,
+    "description": "",
+    "tags": [
+      "reeds"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Bedroll",
+    "base_price": 1.0,
+    "weight": 7.0,
+    "description": "",
+    "tags": [
+      "cloth",
+      "textiles"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Bell",
+    "base_price": 1.0,
+    "weight": 0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Blanket",
+    "base_price": 0.5,
+    "weight": 3.0,
+    "description": "",
+    "tags": [
+      "cloth",
+      "textiles"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Block and tackle",
+    "base_price": 1.0,
+    "weight": 5.0,
+    "description": " A set of pulleys with a cable threaded through them and a hook to attach to objects, a block and tackle allows you to hoist up to four times the weight you can normally lift.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Book",
+    "base_price": 25.0,
+    "weight": 5.0,
+    "description": "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook (described later in this section).",
+    "tags": [
+      "paper",
+      "book_binder"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Bottle, glass",
+    "base_price": 2.0,
+    "weight": 2.0,
+    "description": "",
+    "tags": [
+      "glass"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Bucket",
+    "base_price": 0.05,
+    "weight": 2.0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Caltrops (bag of 20)",
+    "base_price": 1.0,
+    "weight": 2.0,
+    "description": "As an action, you can spread a bag of caltrops to cover a square area that is 5 feet on a side. Any creature that enters the area must succeed on a DC 15 Dexterity saving throw or stop moving this turn and take 1 piercing damage. Taking this damage reduces the creature\u2019s walking speed by 10 feet until the creature regains at least 1 hit point. A creature moving through the area at half speed doesn\u2019t need to make the save.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Candle",
+    "base_price": 0.01,
+    "weight": 0,
+    "description": "For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet.",
+    "tags": [
+      "candlemaker",
+      "wax"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Case, crossbow bolt",
+    "base_price": 1.0,
+    "weight": 1.0,
+    "description": "This wooden case can hold up to twenty crossbow bolts.",
+    "tags": [
+      "wood",
+      "carpenter"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Case, map or scroll",
+    "base_price": 1.0,
+    "weight": 1.0,
+    "description": "This cylindrical leather case can hold up to ten rolled-up sheets of paper or five rolled-up sheets of parchment.",
+    "tags": [
+      "leather",
+      "leather_works"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Chain (10 feet)",
+    "base_price": 5.0,
+    "weight": 1.0,
+    "description": "A chain has 10 hit points. It can be burst with a successful DC 20 Strength check.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Chalk (1 piece)",
+    "base_price": 0.01,
+    "weight": 0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Chest",
+    "base_price": 5.0,
+    "weight": 2.0,
+    "description": "",
+    "tags": [
+      "carpenter",
+      "wood"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Clothes, common",
+    "base_price": 0.5,
+    "weight": 3.0,
+    "description": "",
+    "tags": [
+      "cloth",
+      "textiles"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Clothes, costume",
+    "base_price": 5.0,
+    "weight": 4.0,
+    "description": "",
+    "tags": [
+      "cloth",
+      "textiles"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Clothes, fine",
+    "base_price": 15.0,
+    "weight": 6.0,
+    "description": "",
+    "tags": [
+      "cloth",
+      "textiles"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Clothes, traveler's",
+    "base_price": 2.0,
+    "weight": 4.0,
+    "description": "",
+    "tags": [
+      "cloth",
+      "textiles"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Component pouch",
+    "base_price": 25.0,
+    "weight": 2.0,
+    "description": "A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell\u2019s description).",
+    "tags": [
+      "leather",
+      "leather_works"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Crowbar",
+    "base_price": 2.0,
+    "weight": 5.0,
+    "description": "Using a crowbar grants advantage to Strength checks where the crowbar\u2019s leverage can be applied.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Sprig of mistletoe",
+    "base_price": 1.0,
+    "weight": 0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Totem",
+    "base_price": 1.0,
+    "weight": 0,
+    "description": "",
+    "tags": [
+      "carpenter",
+      "wood"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Wooden staff",
+    "base_price": 5.0,
+    "weight": 4.0,
+    "description": "",
+    "tags": [
+      "wood",
+      "carpenter"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Yew wand",
+    "base_price": 10.0,
+    "weight": 1.0,
+    "description": "",
+    "tags": [
+      "wood",
+      "carpenter"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Emblem",
+    "base_price": 5.0,
+    "weight": 0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Fishing tackle",
+    "base_price": 1.0,
+    "weight": 4.0,
+    "description": "This kit includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting.",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Flask or tankard",
+    "base_price": 0.02,
+    "weight": 1.0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Grappling hook",
+    "base_price": 2.0,
+    "weight": 4.0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Hammer",
+    "base_price": 1.0,
+    "weight": 3.0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Hammer, sledge",
+    "base_price": 2.0,
+    "weight": 1.0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Holy water (flask)",
+    "base_price": 25.0,
+    "weight": 1.0,
+    "description": "As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged attack against a target creature, treating the holy water as an improvised weapon. If the target is a fiend or undead, it takes 2d6 radiant damage. A cleric or paladin may create holy water by performing a special ritual. The ritual takes 1 hour to perform, uses 25 gp worth of powdered silver, and requires the caster to expend a 1st-level spell slot.",
+    "tags": [
+      "priest",
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Hourglass",
+    "base_price": 25.0,
+    "weight": 1.0,
+    "description": "",
+    "tags": [
+      "glass"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Hunting trap",
+    "base_price": 5.0,
+    "weight": 2.0,
+    "description": "When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground. A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet long). A creature can use its action to make a DC 13 Strength check, freeing itself or another creature within its reach on a success. Each failed check deals 1 piercing damage to the trapped creature.",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Ink (1 ounce bottle)",
+    "base_price": 10.0,
+    "weight": 0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Ink pen",
+    "base_price": 0.02,
+    "weight": 0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Jug or pitcher",
+    "base_price": 0.02,
+    "weight": 4.0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Kit, climber's",
+    "base_price": 25.0,
+    "weight": 12.0,
+    "description": "A climber\u2019s kit includes special pitons, boot tips, gloves, and a harness. You can use the climber\u2019s kit as an action to anchor yourself; when you do, you can\u2019t fall more than 25 feet from the point where you anchored yourself, and you can\u2019t climb more than 25 feet away from that point without undoing the anchor.",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Kit, disguise",
+    "base_price": 25.0,
+    "weight": 3.0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Kit, forgery",
+    "base_price": 15.0,
+    "weight": 5.0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Kit, herbalism",
+    "base_price": 5.0,
+    "weight": 3.0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Kit, healer's",
+    "base_price": 5.0,
+    "weight": 3.0,
+    "description": "This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check.",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Kit, mess",
+    "base_price": 0.2,
+    "weight": 1.0,
+    "description": "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl.",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Kit, poisoner's",
+    "base_price": 50.0,
+    "weight": 2.0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Ladder (10-foot)",
+    "base_price": 0.1,
+    "weight": 2.0,
+    "description": "",
+    "tags": [
+      "wood",
+      "carpenter"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Lamp",
+    "base_price": 0.5,
+    "weight": 1.0,
+    "description": "A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Lantern, bullseye",
+    "base_price": 10.0,
+    "weight": 2.0,
+    "description": "A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Lantern, hooded",
+    "base_price": 5.0,
+    "weight": 2.0,
+    "description": "A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Lock",
+    "base_price": 10.0,
+    "weight": 1.0,
+    "description": "A key is provided with the lock. Without the key, a creature proficient with thieves\u2019 tools can pick this lock with a successful DC 15 Dexterity check. Your GM may decide that better locks are available for higher prices.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Magnifying glass",
+    "base_price": 100.0,
+    "weight": 0,
+    "description": "This lens allows a closer look at small objects. It is also useful as a substitute for flint and steel when starting fires. Lighting a fire with a magnifying glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite. A magnifying glass grants advantage on any ability check made to appraise or inspect an item that is small or highly detailed.",
+    "tags": [
+      "iron",
+      "blacksmith",
+      "glass"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Manacles",
+    "base_price": 2.0,
+    "weight": 6.0,
+    "description": "These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check. Each set of manacles comes with one key. Without the key, a creature proficient with thieves\u2019 tools can pick the manacles\u2019 lock with a successful DC 15 Dexterity check. Manacles have 15 hit points.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Mirror, steel",
+    "base_price": 5.0,
+    "weight": 0.5,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Oil (flask)",
+    "base_price": 0.1,
+    "weight": 1.0,
+    "description": "Oil usually comes in a clay flask that holds 1 pint. As an action, you can splash the oil in this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. Make a ranged attack against a target creature or object, treating the oil as an improvised weapon. On a hit, the target is covered in oil. If the target takes any fire damage before the oil dries (after 1 minute), the target takes an additional 5 fire damage from the burning oil. You can also pour a flask of oil on the ground to cover a 5-foot-square area, provided that the surface is level. If lit, the oil burns for 2 rounds and deals 5 fire damage to any creature that enters the area or ends its turn in the area. A creature can take this damage only once per turn.",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Paper (one sheet)",
+    "base_price": 0.2,
+    "weight": 0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Parchment (one sheet)",
+    "base_price": 0.1,
+    "weight": 0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Perfume (vial)",
+    "base_price": 5.0,
+    "weight": 0,
+    "description": "",
+    "tags": [
+      "glass"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Pick, miner's",
+    "base_price": 2.0,
+    "weight": 1.0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Piton",
+    "base_price": 0.05,
+    "weight": 0.25,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Poison, basic (vial)",
+    "base_price": 100.0,
+    "weight": 0,
+    "description": "You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poison takes an action. A creature hit by the poisoned weapon or ammunition must make a DC 10 Constitution saving throw or take 1d4 poison damage. Once applied, the poison retains potency for 1 minute before drying.",
+    "tags": [
+      "glass",
+      "alchemist"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Pole (10-foot)",
+    "base_price": 0.05,
+    "weight": 7.0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Pot, iron",
+    "base_price": 2.0,
+    "weight": 1.0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Potion of healing",
+    "base_price": 50.0,
+    "weight": 0.5,
+    "description": "A character who drinks the magical red fluid in this vial regains 2d4 + 2 hit points. Drinking or administering a potion takes an action.",
+    "tags": [
+      "magic_shop",
+      "glass"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Pouch",
+    "base_price": 0.5,
+    "weight": 1.0,
+    "description": "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section).",
+    "tags": [
+      "cloth",
+      "textiles"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Quiver",
+    "base_price": 1.0,
+    "weight": 1.0,
+    "description": "A quiver can hold up to 20 arrows.",
+    "tags": [
+      "leather",
+      "leather_works"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Ram, portable",
+    "base_price": 4.0,
+    "weight": 3.0,
+    "description": "You can use a portable ram to break down doors. When doing so, you gain a +4 bonus on the Strength check. One other character can help you use the ram, giving you advantage on this check.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Rations (1 day)",
+    "base_price": 0.5,
+    "weight": 2.0,
+    "description": "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts.",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Reliquary",
+    "base_price": 5.0,
+    "weight": 2.0,
+    "description": "",
+    "tags": [
+      "paper",
+      "book_binder"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Robes",
+    "base_price": 1.0,
+    "weight": 4.0,
+    "description": "",
+    "tags": [
+      "cloth",
+      "textiles"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Rope, hempen (50 feet)",
+    "base_price": 1.0,
+    "weight": 1.0,
+    "description": "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Rope, silk (50 feet)",
+    "base_price": 10.0,
+    "weight": 5.0,
+    "description": "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check.",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Sack",
+    "base_price": 0.01,
+    "weight": 0.5,
+    "description": "",
+    "tags": [
+      "cloth",
+      "textiles"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Scale, merchant's",
+    "base_price": 5.0,
+    "weight": 3.0,
+    "description": "A scale includes a small balance, pans, and a suitable assortment of weights up to 2 pounds. With it, you can measure the exact weight of small objects, such as raw precious metals or trade goods, to help determine their worth.",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Sealing wax",
+    "base_price": 0.5,
+    "weight": 0,
+    "description": "",
+    "tags": [
+      "wax"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Shovel",
+    "base_price": 2.0,
+    "weight": 5.0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Signal whistle",
+    "base_price": 0.05,
+    "weight": 0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Signet ring",
+    "base_price": 5.0,
+    "weight": 0,
+    "description": "",
+    "tags": [
+      "jewler",
+      "exotic_good",
+      "precious_metal"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Soap",
+    "base_price": 0.02,
+    "weight": 0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Spellbook",
+    "base_price": 50.0,
+    "weight": 3.0,
+    "description": "",
+    "tags": [
+      "magic_shop",
+      "paper",
+      "book_binder"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Spikes, iron (10)",
+    "base_price": 1.0,
+    "weight": 5.0,
+    "description": "",
+    "tags": [
+      "iron",
+      "blacksmith"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Spyglass",
+    "base_price": 1000.0,
+    "weight": 1.0,
+    "description": "Objects viewed through a spyglass are magnified to twice their size.",
+    "tags": [
+      "iron",
+      "blacksmith",
+      "glass"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Tent, two-person",
+    "base_price": 2.0,
+    "weight": 2.0,
+    "description": "A simple and portable canvas shelter, a tent sleeps two.",
+    "tags": [
+      "cloth",
+      "textiles"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Tinderbox",
+    "base_price": 0.5,
+    "weight": 1.0,
+    "description": "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch\u2014or anything else with abundant, exposed fuel\u2014takes an action. Lighting any other fire takes 1 minute.",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Torch",
+    "base_price": 0.01,
+    "weight": 1.0,
+    "description": "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage.",
+    "tags": [
+      "wood"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Vial",
+    "base_price": 1.0,
+    "weight": 0,
+    "description": "",
+    "tags": [
+      "glass"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Waterskin",
+    "base_price": 0.2,
+    "weight": 5.0,
+    "description": "",
+    "tags": [
+      "leather",
+      "leather_works"
+    ],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  },
+  {
+    "name": "Whetstone",
+    "base_price": 0.01,
+    "weight": 1.0,
+    "description": "",
+    "tags": [],
+    "base_availability": 0.8,
+    "price": null,
+    "stock": 0,
+    "base_stock": 50,
+    "stocked_quantity": 0
+  }
+]
