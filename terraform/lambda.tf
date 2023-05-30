@@ -1,5 +1,13 @@
-resource "aws_iam_role" "random-store-backend-lambda" {
-    name = "random-store-backend-lambda"
+resource "aws_cloudwatch_log_group" "devRSLogGroup" {
+  name              = "/aws/lambda/${local.lambda_name}"
+  retention_in_days = 3
+  lifecycle {
+    prevent_destroy = false
+  }
+}
+
+resource "aws_iam_role" "devRandomStoreBackendLambda" {
+    name = "devRandomStoreBackendLambda"
     assume_role_policy = <<EOF
     {
         "Version": "2012-10-17",
@@ -33,7 +41,7 @@ resource "aws_iam_role" "random-store-backend-lambda" {
             "dynamodb:UpdateTimeToLive"
         ],
         "Resource": [
-            "arn:aws:dynamodb:us-east-1:950094899988:table/RandomStore"
+            "${aws_dynamodb_table.devRandomStore.arn}"
         ],
         "Effect": "Allow"
     },
@@ -52,7 +60,7 @@ resource "aws_iam_role" "random-store-backend-lambda" {
             "logs:PutLogEvents"
         ],
         "Resource": [
-            "arn:aws:logs:us-east-1:950094899988:log-group:/aws/lambda/random_store_backend:*"
+            "arn:aws:logs:us-east-1:950094899988:log-group:/aws/lambda/${local.lambda_name}:*"
         ],
         "Effect": "Allow"
     }
@@ -66,14 +74,20 @@ EOF
 }
 
 resource "aws_lambda_function" "devRandomStoreBackend" {
-  function_name    = "devRandomStoreBackend"
+  function_name    = local.lambda_name
   filename         = "${path.module}/../output/function.zip"
   source_code_hash = filebase64sha256("${path.module}/../output/function.zip")
-  role             = aws_iam_role.random-store-backend-lambda.arn
+  role             = aws_iam_role.devRandomStoreBackendLambda.arn
+  depends_on = [aws_cloudwatch_log_group.devRSLogGroup]
   runtime          = "go1.x"
-  handler          = "Handler"
+  handler          = "main"
   tags = {
     Project = "RandomStore"
     Environment = "Dev"
+  }
+  environment {
+    variables = {
+        RSTableName = aws_dynamodb_table.devRandomStore.id
+    }
   }
 }

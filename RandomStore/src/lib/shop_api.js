@@ -1,12 +1,14 @@
+
+
 export async function getShop(storeid) {
-    var url = `https://api.randomstore.scselvy.com/getStore?storeid=${storeid}`;
+    var url = `${import.meta.env.VITE_API_ENDPOINT}/getStore?storeid=${storeid}`;
     var resp = await fetch(url);
     var shopData = await resp.json();
     return shopData;
 }
 
 export async function saveShop(shop) {
-    var url = `https://api.randomstore.scselvy.com/saveStore`
+    var url = `${import.meta.env.VITE_API_ENDPOINT}/saveStore`
     var body = JSON.stringify(shop)
     try{
         var resp = await fetch(url, {

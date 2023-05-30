@@ -10,11 +10,6 @@ resource "aws_dynamodb_table" "devRandomStore" {
         type = "S"
     }
 
-    attribute {
-        name = "ExpiresAt"
-        type = "N"
-    }
-
     ttl {
         attribute_name = "ExpiresAt"
         enabled = true
