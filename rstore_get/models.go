@@ -29,7 +29,7 @@ type RandomStore struct {
 }
 
 type ShopRecord struct {
-	StoreID       string      `json:"storeID"`
-	LastTouchedAt string      `json:"last_touched_at"`
-	Shop          RandomStore `json:"shop"`
+	StoreID   string      `json:"storeID"`
+	ExpiresAt int64       `json:"expires_at"`
+	Shop      RandomStore `json:"shop"`
 }

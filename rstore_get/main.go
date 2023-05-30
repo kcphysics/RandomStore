@@ -59,6 +59,12 @@ func GetHandler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTTP
 		return events.APIGatewayV2HTTPResponse{}, err
 	}
 	log.Println("Retrieved the shop successfully from DynamoDB")
+	expiration_time, err := UpdateOnRead(client, storeid)
+	if err != nil {
+		log.Printf("Unable to update expiration time due to error: %v\n", err)
+	} else {
+		log.Printf("Successfully updated expiration time to %d\n", expiration_time)
+	}
 	shop_str, err := json.Marshal(shop)
 	if err != nil {
 		log.Printf("Unable to serialize saved object: %v\n", err)
@@ -107,6 +113,34 @@ func PostHandler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTT
 	return res, nil
 }
 
+func UpdateOnRead(client *dynamodb.Client, storeid string) (int64, error) {
+	new_expiration_time := time.Now().AddDate(0, 0, 30)
+	net, err := attributevalue.Marshal(new_expiration_time.Unix())
+	if err != nil {
+		return 0, err
+	}
+	sid, err := attributevalue.Marshal(storeid)
+	if err != nil {
+		return 0, err
+	}
+	update_expression := "SET ExpiresAt = :new_expiration_time"
+	expression_attribute_values := map[string]types.AttributeValue{
+		":new_expiration_time": net,
+	}
+	key := map[string]types.AttributeValue{"StoreID": sid}
+	update_item_input := dynamodb.UpdateItemInput{
+		Key:                       key,
+		UpdateExpression:          &update_expression,
+		ExpressionAttributeValues: expression_attribute_values,
+		TableName:                 aws.String("RandomStore"),
+	}
+	_, err = client.UpdateItem(context.TODO(), &update_item_input)
+	if err != nil {
+		return 0, err
+	}
+	return new_expiration_time.Unix(), nil
+}
+
 func GetShop(client *dynamodb.Client, storeid string) (RandomStore, error) {
 	var Shop RandomStore
 	sid, err := attributevalue.Marshal(storeid)
@@ -131,10 +165,11 @@ func GetShop(client *dynamodb.Client, storeid string) (RandomStore, error) {
 }
 
 func PutShop(client *dynamodb.Client, shop RandomStore) (string, error) {
+	expiration_date := time.Now().AddDate(0, 0, 30)
 	shop_record := ShopRecord{
-		StoreID:       shop.StoreID,
-		LastTouchedAt: time.Now().String(),
-		Shop:          shop,
+		StoreID:   shop.StoreID,
+		ExpiresAt: expiration_date.Unix(),
+		Shop:      shop,
 	}
 	item, err := attributevalue.MarshalMap(shop_record)
 	if err != nil {
@@ -156,30 +191,21 @@ func main() {
 }
 
 // func main() {
-// 	var Shop RandomStore
-// 	raw_data, err := os.ReadFile("dummy_store.json")
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// 	err = json.Unmarshal(raw_data, &Shop)
-// 	if err != nil {
-// 		panic(err)
-// 	}
-// 	log.Println("Successfully read in the Shop")
 // 	cfg, err := config.LoadDefaultConfig(context.TODO())
 // 	if err != nil {
-// 		panic(err)
+// 		panic("Can't get AWS Config")
 // 	}
 // 	client := dynamodb.NewFromConfig(cfg)
-// 	// sid, err := PutShop(client, Shop)
-// 	// if err != nil {
-// 	// 	panic(err)
-// 	// }
-// 	// log.Printf("Created an entry I guess... sid is ==> %s", sid)
-// 	new_shop, err := GetShop(client, "1234567")
+// 	storeid := "e0524f08-7ef8-4327-ae6c-9d2cb8ae506d"
+// 	shop, err := GetShop(client, storeid)
 // 	if err != nil {
-// 		log.Panicln(err)
+// 		panic(fmt.Sprintf("Unable to get shop from DynamoDB because %v", err))
 // 	}
-// 	log.Println(new_shop)
-// 	log.Printf("We got ourselves a shop recalled!  Name ==> %s", new_shop.Name)
+// 	fmt.Println(shop.Name)
+// 	expires_at, err := UpdateOnRead(client, storeid)
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	fmt.Println(time.Unix(expires_at, 0))
+
 // }
