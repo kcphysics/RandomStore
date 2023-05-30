@@ -157,7 +157,12 @@
 
 <div class="ShopList">
     {#if $shop.items.length > 0}
-    <h2>Welcome to {$shop.name}<button id="editStoreName" on:click|preventDefault={showNewStoreNameDialog}><Icon data={pencil} /></button></h2>
+    <h2>
+        Welcome to {$shop.name}
+        {#if !isViewingShop}
+        <button id="editStoreName" on:click|preventDefault={showNewStoreNameDialog}><Icon data={pencil} /></button>
+        {/if}
+    </h2>
     <div class="outOfStockControl">
         <label for="oosCheckbox">Show out of Stock Items: </label>
         <input type=checkbox bind:checked={$showOutOfStock} />

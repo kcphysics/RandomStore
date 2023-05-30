@@ -16,9 +16,12 @@
     hr {
         width: 50%;
     }
+
+    .tagLine {
+        font-size: small;
+    }
 </style>
 
-<p>Welcome to {$shop.name}</p>
 <p class="tagLine">If you want to generate one for yourself, click <a href="/">here</a></p>
 <hr>
 <ShopItemList />
