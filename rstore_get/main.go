@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"log"
+	"os"
 	"time"
 
 	"github.com/aws/aws-lambda-go/events"
@@ -16,7 +17,21 @@ import (
 	"github.com/aws/aws-sdk-go-v2/service/dynamodb/types"
 )
 
+var TableName string
+var SiteName string
+
 func Handler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTTPResponse, error) {
+	if os.Getenv("RSTableName") == "" {
+		TableName = "RandomStore"
+	} else {
+		TableName = os.Getenv("RSTableName")
+	}
+	if os.Getenv("RSSiteName") == "" {
+		SiteName = "https://randomstore.scselvy.com"
+	} else {
+		SiteName = os.Getenv("RSSiteName")
+	}
+	log.Printf("The target Table to store/get information from is %s", TableName)
 	var Response events.APIGatewayV2HTTPResponse
 	var err error
 	log.Printf("Starting Handler, got the method %s\n", request.RequestContext.HTTP.Method)
@@ -99,7 +114,7 @@ func PostHandler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTT
 		ShopURL string
 	}{
 		ShopID:  shop_id,
-		ShopURL: fmt.Sprintf("https://randomstore.scselvy.com/index.html?storeid=%s", shop_id),
+		ShopURL: fmt.Sprintf("%s/index.html?storeid=%s", SiteName, shop_id),
 	}
 	stored_str, err := json.Marshal(stored)
 	if err != nil {
@@ -132,7 +147,7 @@ func UpdateOnRead(client *dynamodb.Client, storeid string) (int64, error) {
 		Key:                       key,
 		UpdateExpression:          &update_expression,
 		ExpressionAttributeValues: expression_attribute_values,
-		TableName:                 aws.String("RandomStore"),
+		TableName:                 aws.String(TableName),
 	}
 	_, err = client.UpdateItem(context.TODO(), &update_item_input)
 	if err != nil {
@@ -150,7 +165,7 @@ func GetShop(client *dynamodb.Client, storeid string) (RandomStore, error) {
 	key := map[string]types.AttributeValue{"StoreID": sid}
 	response, err := client.GetItem(context.TODO(), &dynamodb.GetItemInput{
 		Key:       key,
-		TableName: aws.String("RandomStore"),
+		TableName: aws.String(TableName),
 	})
 	log.Println(response)
 	if err != nil {
@@ -177,7 +192,7 @@ func PutShop(client *dynamodb.Client, shop RandomStore) (string, error) {
 	}
 	_, err = client.PutItem(context.TODO(), &dynamodb.PutItemInput{
 		Item:      item,
-		TableName: aws.String("RandomStore"),
+		TableName: aws.String(TableName),
 	})
 	if err != nil {
 		return "", nil
