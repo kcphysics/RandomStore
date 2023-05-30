@@ -18,6 +18,7 @@
     .titleContainer {
         position: relative;
         text-align: center;
+        display: block;
     }
 
     .titleName {
@@ -31,8 +32,8 @@
 </style>
 
 <div class="header">
-    <div class="titleContainer">
+    <a class="titleContainer" href="/">
         <img src={Logo} alt="Store Logo" title="Store Logo" class="logo">
         <div class="titleName">RandomStore</div>
-    </div>
+    </a>
 </div>
