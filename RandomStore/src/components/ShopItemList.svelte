@@ -4,6 +4,7 @@
     import plus from "svelte-awesome/icons/plus";
     import clipboard from "svelte-awesome/icons/clipboard";
     import checkCircle from "svelte-awesome/icons/checkCircle";
+    import pencil from "svelte-awesome/icons/pencil";
     import {get} from 'svelte/store';
     import {saveShop} from "../lib/shop_api";
     import ShopItem from "./ShopItem.svelte";
@@ -12,6 +13,8 @@
     let confirmSaveDlg;
     let addNewItemDlg;
     let urlDisplayDlg;
+    let changeStoreNameDlg;
+    let newStoreName
     let newName;
     let newWeight;
     let newPrice;
@@ -93,6 +96,21 @@
     function showAddNewDialog() {
         addNewItemDlg.showModal()
     }
+
+    function showNewStoreNameDialog() {
+        changeStoreNameDlg.showModal()
+    }
+    
+    function cancelNewStoreName() {
+        changeStoreNameDlg.close()
+    }
+
+    function saveNewStoreName() {
+        var oshop = get(shop)
+        oshop.name = newStoreName
+        shop.set(oshop)
+        changeStoreNameDlg.close()
+    }
 </script>
 
 <style>
@@ -113,21 +131,38 @@
         text-align: left;
     }
 
-    #saveShopBtn {
+    #saveShopBtn, .saveBtn {
         background-color: green;
     }
 
-    #cancelSaveBtn {
+    #cancelSaveBtn, .cancelBtn {
         background-color: red;
     }
     .urlText {
         width: 100%
     }
+
+    #editStoreName {
+        border: none;
+        border-radius: 0;
+        background-color: inherit;
+        padding: 0;
+        margin-left: 1rem;
+    }
+
+    .formControl {
+        margin-top: 1rem;
+    }
 </style>
 
 <div class="ShopList">
     {#if $shop.items.length > 0}
-    <h2>Welcome to {$shop.name}</h2>
+    <h2>
+        Welcome to {$shop.name}
+        {#if !isViewingShop}
+        <button id="editStoreName" on:click|preventDefault={showNewStoreNameDialog}><Icon data={pencil} /></button>
+        {/if}
+    </h2>
     <div class="outOfStockControl">
         <label for="oosCheckbox">Show out of Stock Items: </label>
         <input type=checkbox bind:checked={$showOutOfStock} />
@@ -188,6 +223,16 @@
             <button class="saveBtn" on:click|preventDefault={copyUrlToClipboard}><Icon data={completeIcon} /></button>
         </div>
         <button class="cancelBtn" on:click|preventDefault={closeUrlDlg}>Close</button>
+    </dialog>
+    <dialog bind:this={changeStoreNameDlg}>
+        <form>
+            <p>Change the store name</p>
+            <input type="text" bind:value={newStoreName}>
+            <div class="formControl">
+                <button class="saveBtn" on:click|preventDefault={saveNewStoreName}>Save</button>
+                <button class="cancelBtn" on:click|preventDefault={cancelNewStoreName}>Cancel</button>
+            </div>
+        </form>
     </dialog>
     {/if}
 </div>
