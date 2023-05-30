@@ -88,6 +88,23 @@ resource "aws_lambda_function" "devRandomStoreBackend" {
   environment {
     variables = {
         RSTableName = aws_dynamodb_table.devRandomStore.id
+        RSSiteName = "https://dev.randomstore.scselvy.com"
     }
   }
+}
+
+resource "aws_lambda_permission" "devRSAPIGatewayPermsSave" {
+    statement_id = "devRSAPIGatewayPermsSave"
+    action = "lambda:InvokeFunction"
+    function_name = local.lambda_name
+    principal = "apigateway.amazonaws.com"
+    source_arn = "${aws_apigatewayv2_api.devRandomStore.execution_arn}/*/*/saveStore"
+}
+
+resource "aws_lambda_permission" "devRSAPIGatewayPermsGet" {
+    statement_id = "devRSAPIGatewayPermsGet"
+    action = "lambda:InvokeFunction"
+    function_name = local.lambda_name
+    principal = "apigateway.amazonaws.com"
+    source_arn = "${aws_apigatewayv2_api.devRandomStore.execution_arn}/*/*/getStore"
 }

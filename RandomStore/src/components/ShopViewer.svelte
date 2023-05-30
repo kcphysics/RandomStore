@@ -3,7 +3,7 @@
     import { onMount } from "svelte";
     import { getShop } from "../lib/shop_api";
     import ShopItemList from "./ShopItemList.svelte";
-    import { shop, showOutOfStock } from '../stores/SettlementSelectorStore';
+    import { shop } from '../stores/SettlementSelectorStore';
 
     onMount(async () => {
         console.log(`Mounting data for StoreID: ${storeid}`)

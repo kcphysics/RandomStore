@@ -2,6 +2,7 @@
 
 export async function getShop(storeid) {
     var url = `${import.meta.env.VITE_API_ENDPOINT}/getStore?storeid=${storeid}`;
+    console.log(`Attempting to fetch store ${storeid} from ${url}`)
     var resp = await fetch(url);
     var shopData = await resp.json();
     return shopData;

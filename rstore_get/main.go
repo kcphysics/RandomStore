@@ -18,12 +18,18 @@ import (
 )
 
 var TableName string
+var SiteName string
 
 func Handler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTTPResponse, error) {
 	if os.Getenv("RSTableName") == "" {
 		TableName = "RandomStore"
 	} else {
 		TableName = os.Getenv("RSTableName")
+	}
+	if os.Getenv("RSSiteName") == "" {
+		SiteName = "https://randomstore.scselvy.com"
+	} else {
+		SiteName = os.Getenv("RSSiteName")
 	}
 	log.Printf("The target Table to store/get information from is %s", TableName)
 	var Response events.APIGatewayV2HTTPResponse
@@ -108,7 +114,7 @@ func PostHandler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTT
 		ShopURL string
 	}{
 		ShopID:  shop_id,
-		ShopURL: fmt.Sprintf("https://randomstore.scselvy.com/index.html?storeid=%s", shop_id),
+		ShopURL: fmt.Sprintf("%s/index.html?storeid=%s", SiteName, shop_id),
 	}
 	stored_str, err := json.Marshal(stored)
 	if err != nil {
