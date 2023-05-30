@@ -104,6 +104,18 @@
         background-color: inherit;
         padding: 0;
     }
+
+    .saveBtn {
+        background-color: green;
+    }
+
+    .cancelBtn {
+        background-color: red;
+    }
+
+    .formControl {
+        margin-top: 1rem;
+    }
 </style>
 
 <tr class:outOfStock="{stocked_quantity <= 0}">
@@ -143,8 +155,10 @@
             <input id="price" type="number" bind:value={new_price}><br>
             <label for="stock">Stock:</label>
             <input id="stock" type="number" bind:value={new_stocked_quantity}><br>
-            <button id="saveItemChanges" on:click|preventDefault={saveItemChanges}>Save</button>
-            <button id="cancelItemChanges" on:click|preventDefault={cancelItemChanges}>Cancel</button>
+            <div class="formControl">
+                <button class="saveBtn" on:click|preventDefault={saveItemChanges}>Save</button>
+                <button class="cancelBtn" on:click|preventDefault={cancelItemChanges}>Cancel</button>
+            </div>
         </form>
     </dialog>
     {/if}
