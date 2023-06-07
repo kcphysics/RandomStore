@@ -8,6 +8,7 @@ export const surplusEvents = writable(0)
 export const showOutOfStock = writable(false)
 export const isViewingShop = writable(false)
 export const shop = writable( {
+    "storeid": "",
     "name": "No Shop Generated",
     "config": {
         "settlementType": "None",

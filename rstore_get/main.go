@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"crypto/sha256"
 	"encoding/json"
 	"fmt"
 	"log"
@@ -19,6 +20,19 @@ import (
 
 var TableName string
 var SiteName string
+
+func calculateBearerToken(storeid string) string {
+	astring := fmt.Sprintf("rstore|==%s==|rstore", storeid)
+	ahash := sha256.Sum256([]byte(astring))
+	return fmt.Sprintf("Bearer %x", ahash)
+}
+
+func validateHeaders(headers map[string]string, storeid string) bool {
+	bearer := headers["authorization"]
+	correct_bearer := calculateBearerToken(storeid)
+	log.Printf("Calculated: %s ---- Provided: %s", correct_bearer, bearer)
+	return bearer == correct_bearer
+}
 
 func Handler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTTPResponse, error) {
 	if os.Getenv("RSTableName") == "" {
@@ -61,6 +75,12 @@ func Handler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTTPRes
 func GetHandler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTTPResponse, error) {
 	log.Println("Got a GET request, starting to fetch the requested store")
 	storeid := request.QueryStringParameters["storeid"]
+	if !validateHeaders(request.Headers, storeid) {
+		return events.APIGatewayV2HTTPResponse{
+			StatusCode: 401,
+			Body:       "Unauthorized, go away",
+		}, nil
+	}
 	log.Printf("Received a request to fetch store saved at with Store ID of: %s\n", storeid)
 	cfg, err := config.LoadDefaultConfig(context.TODO())
 	if err != nil {
@@ -99,6 +119,12 @@ func PostHandler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTT
 	err := json.Unmarshal([]byte(request.Body), &shop)
 	if err != nil {
 		return events.APIGatewayV2HTTPResponse{}, fmt.Errorf("invalid JSON recieved, %v", err)
+	}
+	if !validateHeaders(request.Headers, shop.StoreID) {
+		return events.APIGatewayV2HTTPResponse{
+			StatusCode: 401,
+			Body:       "Unauthorized, go away",
+		}, nil
 	}
 	cfg, err := config.LoadDefaultConfig(context.TODO())
 	if err != nil {
