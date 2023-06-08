@@ -56,7 +56,7 @@
     "base_availability": 0.8,
     "price": null,
     "stock": 0,
-    "base_stock": 50,
+    "base_stock": 100,
     "stocked_quantity": 0
   },
   {
@@ -71,7 +71,7 @@
     "base_availability": 0.8,
     "price": null,
     "stock": 0,
-    "base_stock": 50,
+    "base_stock": 100,
     "stocked_quantity": 0
   },
   {
@@ -86,7 +86,7 @@
     "base_availability": 0.8,
     "price": null,
     "stock": 0,
-    "base_stock": 50,
+    "base_stock": 100,
     "stocked_quantity": 0
   },
   {
@@ -100,7 +100,7 @@
     "base_availability": 0.8,
     "price": null,
     "stock": 0,
-    "base_stock": 50,
+    "base_stock": 100,
     "stocked_quantity": 0
   },
   {
@@ -1350,7 +1350,7 @@
     "base_availability": 0.8,
     "price": null,
     "stock": 0,
-    "base_stock": 50,
+    "base_stock": 10,
     "stocked_quantity": 0
   },
   {
