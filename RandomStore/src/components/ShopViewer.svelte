@@ -12,6 +12,10 @@
         console.log(`Mounting data for StoreID: ${storeid}`)
         try {
             var shopData = await getShop(storeid);
+            if (shopData.storeid == "" || shopData.hasOwnProperty("message") || shopData.hasOwnProperty("error")) {
+                error_message = `Could not get ${storeid} from the server, there may be an error or the store may not exist`
+                return
+            }
             shop.set(shopData);
         } catch(error) {
             console.log(String(error))

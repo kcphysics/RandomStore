@@ -89,7 +89,7 @@ func GetHandler(request events.APIGatewayV2HTTPRequest) (events.APIGatewayV2HTTP
 	}
 	client := dynamodb.NewFromConfig(cfg)
 	shop, err := GetShop(client, storeid)
-	if err != nil {
+	if err != nil || shop.StoreID == "" {
 		log.Printf("Unable to get store with StoreID: %s due to error: %v\n", storeid, err)
 		return events.APIGatewayV2HTTPResponse{}, err
 	}
@@ -193,9 +193,9 @@ func GetShop(client *dynamodb.Client, storeid string) (RandomStore, error) {
 		Key:       key,
 		TableName: aws.String(TableName),
 	})
-	log.Println(response)
+	log.Println(response.Item)
 	if err != nil {
-		return RandomStore{}, nil
+		return RandomStore{}, err
 	} else {
 		err = attributevalue.Unmarshal(response.Item["Shop"], &Shop)
 		if err != nil {

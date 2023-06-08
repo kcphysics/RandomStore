@@ -35,7 +35,7 @@
     async function saveStore() {
         let shopCopy = get(shop)
         let resp = await saveShop(shopCopy)
-        if (resp.hasOwnProperty("error")){
+        if (resp.hasOwnProperty("error") || resp.hasOwnProperty("message")){
             error_message = resp.error
             return
         } else {
