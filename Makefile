@@ -2,11 +2,13 @@ GOOS=linux
 GOARCH=amd64
 TARGET_BUCKET=randomstore.scselvy.com
 TARGET_LAMBDA=arn:aws:lambda:us-east-1:950094899988:function:random_store_backend
+OUTPUT_DIR=/RandomStore/output
 
 .ONESHELL:
 
 clean_lambda:
 	rm -rf rstore_get/output
+	rm -rf "$(OUTPUT_DIR)"
 
 clean_app:
 	rm -rf RandomStore/dist
@@ -17,10 +19,11 @@ clean_node:
 lambda:
 	cd rstore_get;
 	GOOS="$(GOOS)" GOARCH="$(GOARCH)" go build -o output/main;
-	zip -j output/function.zip output/main;
+	zip -j "$(OUTPUT_DIR)/function.zip" output/main;
 	cd ..;
 
 app: 
+	mkdir "$(OUTPUT_DIR)"
 	cd RandomStore;
 	npm install;
 	npm run build;
