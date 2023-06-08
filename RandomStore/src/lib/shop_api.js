@@ -10,7 +10,6 @@ export async function getShop(storeid) {
             "Authorization": `Bearer ${ahead}`
         }
     }
-    console.log(`Header will be ${ahead}`)
     console.log(`Attempting to fetch store ${storeid} from ${url}`)
     var resp = await fetch(url, options);
     var shopData = await resp.json();
@@ -22,7 +21,6 @@ export async function saveShop(shop) {
     var ahead = await calculate_auth_header(storeid)
     var url = `${import.meta.env.VITE_API_ENDPOINT}/saveStore`
     var body = JSON.stringify(shop)
-    console.log(`Header will be ${ahead}`)
     try{
         var resp = await fetch(url, {
             method: "POST",
@@ -32,13 +30,17 @@ export async function saveShop(shop) {
             },
             body: JSON.stringify(shop)
         })
-        let response_json = await resp.json()
-        console.log(response_json)
-        return response_json;
+        try {
+            let response_json = await resp.json()
+            return response_json;
+        } catch(error) {
+            return {
+                error: "Unable to parse response from server, could not save"
+            }
+        }
     } catch (error) {
-        console.log(error)
         return {
-            error: error
+            error: "Unexpeced error from server, could not save"
         }
     }
 }

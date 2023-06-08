@@ -4,11 +4,19 @@
     import { getShop } from "../lib/shop_api";
     import ShopItemList from "./ShopItemList.svelte";
     import { shop } from '../stores/SettlementSelectorStore';
+    import ErrorCard from "./ErrorCard.svelte";
+
+    let error_message = "";
 
     onMount(async () => {
         console.log(`Mounting data for StoreID: ${storeid}`)
-        var shopData = await getShop(storeid);
-        shop.set(shopData);
+        try {
+            var shopData = await getShop(storeid);
+            shop.set(shopData);
+        } catch(error) {
+            console.log(String(error))
+            error_message = `Could not get ${storeid} from the server, there may be an error or the store may not exist`
+        }
     })
 </script>
 
@@ -24,5 +32,9 @@
 
 <p class="tagLine">If you want to generate one for yourself, click <a href="/">here</a></p>
 <hr>
-<ShopItemList />
+{#if error_message != ""}
+    <ErrorCard {error_message} />
+{:else}
+    <ShopItemList />
+{/if}
 <hr>

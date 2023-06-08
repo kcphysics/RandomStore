@@ -9,6 +9,7 @@
     import {saveShop} from "../lib/shop_api";
     import ShopItem from "./ShopItem.svelte";
     import { shop, showOutOfStock, isViewingShop } from '../stores/SettlementSelectorStore';
+    import ErrorCard from "./ErrorCard.svelte";
 
     let confirmSaveDlg;
     let addNewItemDlg;
@@ -23,6 +24,7 @@
     let ShopID;
     let ShopURL;
     let completeIcon = clipboard;
+    let error_message = "";
 
     function showSaveDialog() {
         confirmSaveDlg.showModal()
@@ -34,7 +36,8 @@
         let shopCopy = get(shop)
         let resp = await saveShop(shopCopy)
         if (resp.hasOwnProperty("error")){
-            alert(`An error has occurred while saving: ${resp.error}`)
+            error_message = resp.error
+            return
         } else {
             console.log(resp)
             ShopID = resp.ShopID
@@ -193,6 +196,7 @@
     {#if !$isViewingShop}
     <dialog bind:this={confirmSaveDlg}>
         <form id="confirmSave">
+            {#if error_message != "" }<ErrorCard {error_message} />{/if}
             <p>Saving is free for all right now</p>
             <p>However, to keep it free, if no one has viewed or used this store in 30 days, it will be deleted</p>
             <button id="saveShopBtn" on:click|preventDefault={saveStore}>Save</button>
