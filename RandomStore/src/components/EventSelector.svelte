@@ -34,6 +34,12 @@
         flex: 2;
         justify-self: center;
     }
+
+    @media (max-width: 800px) {
+        .ESelect {
+            margin-top: 1rem;
+        }
+    }
 </style>
 
 <div class="ESelect">

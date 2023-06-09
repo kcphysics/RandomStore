@@ -8,8 +8,8 @@
 
     let settlementMap = new Map([
         ["town", 0],
-        ["village", -0.1],
-        ["city", 0.1]
+        ["village", -0.5],
+        ["city", 0.25]
     ])
 
     function getAvailableTags() {
@@ -67,11 +67,14 @@
             cost_c = 0.4
         }
         let avail = item.base_availability - cost_c - weight_c
-        return Math.floor(item.base_stock * avail)
+        let stock = Math.floor(item.base_stock * avail)
+        let randomized_stock = Math.min(stock - getRandomInt(stock))
+        return randomized_stock
     }
 
     function getPrice(item, total_coefficient) {
-        return Math.floor(((1 + total_coefficient) * item.base_price) + 1)
+        let random_price_coefficient = Math.random() * 0.25
+        return Math.floor(((1 + total_coefficient + random_price_coefficient) * item.base_price) + 1)
     }
 
     function updateItem(item, coefficientMap) {
@@ -144,13 +147,29 @@
         justify-content: center;
         align-items: center;
     }
+
+    details > summary {
+        font-size: larger;
+        font-weight: bold;
+    }
+
+    @media (max-width: 800px) {
+        .ControlBox {
+            flex-direction: column;
+        }
+    }
 </style>
 
-<div class="ControlBox">
-    <SettlementSizeSelector />
-    <EventSelector />
-</div>
-
-<div class="ControlSubmit">
-    <button on:click={generateShop} id="generateShop">Generate</button>
-</div>
+<details open>
+    <summary>Generator Controls</summary>
+    <div>
+        <div class="ControlBox">
+            <SettlementSizeSelector />
+            <EventSelector />
+        </div>
+        
+        <div class="ControlSubmit">
+            <button on:click={generateShop} id="generateShop">Generate</button>
+        </div>
+    </div>
+</details>

@@ -26,7 +26,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 4rem;
+        font-size: 3rem;
         color: white;
     }
 </style>

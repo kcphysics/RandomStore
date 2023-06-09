@@ -116,16 +116,29 @@
     .formControl {
         margin-top: 1rem;
     }
+    td > details {
+        text-align: left;
+    }
+
+    details > summary {
+        text-align: left;
+    }
 </style>
 
 <tr class:outOfStock="{stocked_quantity <= 0}">
     {#if description != ""}
-    <td 
+    <!-- <td 
         data-tooltip={description}
         class="itemName itemWithToolTip"
     >
         {name}
         <Icon data={infoCircle} />
+    </td> -->
+    <td>
+        <details>
+            <summary>{name}</summary>
+            <p>{description}</p>
+        </details>
     </td>
     {:else}
     <td class="itemName">
