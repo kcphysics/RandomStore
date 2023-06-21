@@ -5,6 +5,7 @@
     import clipboard from "svelte-awesome/icons/clipboard";
     import checkCircle from "svelte-awesome/icons/checkCircle";
     import pencil from "svelte-awesome/icons/pencil";
+    import download from "svelte-awesome/icons/download";
     import { get } from "svelte/store";
     import { saveShop } from "../lib/shop_api";
     import ShopItem from "./ShopItem.svelte";
@@ -14,6 +15,7 @@
         isViewingShop,
     } from "../stores/SettlementSelectorStore";
     import ErrorCard from "./ErrorCard.svelte";
+    import { generate_csv } from "../lib/generate_csv";
 
     let confirmSaveDlg;
     let addNewItemDlg;
@@ -125,6 +127,16 @@
         shop.set(oshop);
         changeStoreNameDlg.close();
     }
+
+    function download_csv() {
+        var oshop = get(shop)
+        let csvtext = generate_csv(oshop)
+        var elem = document.createElement("a")
+        elem.setAttribute("href", "data:text/plain;charset=utf-8,"+csvtext)
+        elem.setAttribute("download", `${oshop.name}.csv`)
+        elem.click()
+        document.body.removeChild(elem)
+    }
 </script>
 
 <div class="ShopList">
@@ -135,8 +147,9 @@
                 <button
                     id="editStoreName"
                     on:click|preventDefault={showNewStoreNameDialog}
-                    ><Icon data={pencil} /></button
-                >
+                    >
+                <Icon data={pencil} />
+                </button>            
             {/if}
         </h2>
         <div class="outOfStockControl">
@@ -153,6 +166,9 @@
                 >
             </div>
         {/if}
+        <button class="downloadBtn" on:click|preventDefault={download_csv}>
+           <Icon data={download} /> Download CSV
+        </button>
         <table class="ShopListTable">
             <tr>
                 <th class="itemName"><strong>Item</strong></th>
@@ -303,11 +319,16 @@
 
     .ShopListTable tr td,
     .ShopListTable tr th{
-        width: 14%
+        width: 14%;
     }
 
     .ShopListTable tr td:first-of-type,
     .ShopListTable tr th:first-of-type {
-        width: 40%
+        width: 40%;
+    }
+    .downloadBtn {
+        width: 50%;
+        align-self: center;
+        font-size: small;
     }
 </style>

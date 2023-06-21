@@ -49,43 +49,8 @@
 </script>
 
 <style>
-    .itemWithToolTip {
-        position: relative;
-    }
-
     .itemName {
         text-align: left;
-    }
-    .itemWithToolTip:before {
-        content: attr(data-tooltip);
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 100%;
-        width: 20rem;
-        background-color: black;
-        color: white;
-        text-align: center;
-        padding: 5px;
-        border-radius: 6px;
-        display: none;
-    }
-
-    .itemWithToolTip:hover:before,
-    .itemWithToolTip:hover:after {
-        display: block;
-    }
-
-    .itemWithToolTip:after {
-        content: "";
-        position: absolute;
-        left: 100%;
-        margin-left: -20px;
-        top: 50%;
-        transform: translateY(-50%);
-        border: 10px solid #000;
-        border-color: transparent black transparent transparent;
-        display: none;
     }
 
     .outOfStock {
@@ -127,13 +92,6 @@
 
 <tr class:outOfStock="{stocked_quantity <= 0}">
     {#if description != ""}
-    <!-- <td 
-        data-tooltip={description}
-        class="itemName itemWithToolTip"
-    >
-        {name}
-        <Icon data={infoCircle} />
-    </td> -->
     <td>
         <details>
             <summary>{name}</summary>
