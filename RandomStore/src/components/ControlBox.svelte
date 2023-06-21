@@ -9,7 +9,8 @@
     let settlementMap = new Map([
         ["town", 0],
         ["village", -0.5],
-        ["city", 0.25]
+        ["city", 0.25],
+        ["travelling_merchant", -0.65]
     ])
 
     function getAvailableTags() {
@@ -108,6 +109,27 @@
         return Math.random() < chance
     }
 
+    function create_random_subset(num_items, items) {
+        let local_items = [...items]
+        let return_items = []
+        for (let i = 0; i < num_items; i++) {
+            let r = Math.floor(Math.random() * local_items.length)
+            return_items.push(local_items[r])
+            local_items.splice(r, 1)
+        }
+        return return_items
+    }
+
+    function new_items(items, settlementType) {
+        if (settlementType != "travelling_merchant"){
+            return [...items]
+        } else {
+            let num_items = 10 + Math.floor((Math.random() - 0.5) * 4)
+            console.log(`Num Items: ${num_items}`)
+            return create_random_subset(num_items, items)
+        }
+    }
+
 
     function generateShop() {
         let settlementType = get(selectedSettlement);
@@ -117,7 +139,8 @@
         let scarcity_events = createEvents(numberScarcityEvents, tags)
         let surplus_events = createEvents(numberSurplusEvents, tags)
         let coeffientMap = calculateCoefficients(settlementType, scarcity_events, surplus_events)
-        let newItems = [...items];
+        // let newItems = [...items];
+        let newItems = new_items(items, settlementType)
         updateAllItems(newItems, coeffientMap)
         let storeid = crypto.randomUUID()
         let storeName = generateStoreName()
