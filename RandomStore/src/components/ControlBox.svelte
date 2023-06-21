@@ -125,7 +125,6 @@
             return [...items]
         } else {
             let num_items = 10 + Math.floor((Math.random() - 0.5) * 4)
-            console.log(`Num Items: ${num_items}`)
             return create_random_subset(num_items, items)
         }
     }
